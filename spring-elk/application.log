@@ -1,0 +1,151 @@
+2017-05-14 12:02:13.181  INFO 2608 --- [main] io.javabrains.CourseApiMysqlApplication  : Starting CourseApiMysqlApplication on ADSAMANT02 with PID 2608 (C:\work\project\lib\repo\spring-elk\target\classes started by ADSAMANT in C:\work\project\lib\repo\spring-elk)
+2017-05-14 12:02:13.187  INFO 2608 --- [main] io.javabrains.CourseApiMysqlApplication  : No active profile set, falling back to default profiles: default
+2017-05-14 12:02:13.690  INFO 2608 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@799f10e1: startup date [Sun May 14 12:02:13 IST 2017]; root of context hierarchy
+2017-05-14 12:02:16.901  INFO 2608 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-05-14 12:02:16.920  INFO 2608 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-05-14 12:02:16.922  INFO 2608 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.13
+2017-05-14 12:02:17.177  INFO 2608 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-05-14 12:02:17.177  INFO 2608 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3492 ms
+2017-05-14 12:02:17.533  INFO 2608 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-05-14 12:02:17.540  INFO 2608 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-05-14 12:02:17.540  INFO 2608 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-05-14 12:02:17.541  INFO 2608 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-05-14 12:02:17.541  INFO 2608 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-05-14 12:02:18.117  INFO 2608 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-05-14 12:02:18.143  INFO 2608 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-05-14 12:02:18.259  INFO 2608 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-05-14 12:02:18.261  INFO 2608 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-05-14 12:02:18.264  INFO 2608 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-05-14 12:02:18.328  INFO 2608 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-05-14 12:02:18.948  INFO 2608 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-05-14 12:02:19.533  INFO 2608 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-05-14 12:02:19.795  INFO 2608 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-05-14 12:02:20.709  INFO 2608 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@799f10e1: startup date [Sun May 14 12:02:13 IST 2017]; root of context hierarchy
+2017-05-14 12:02:20.827  INFO 2608 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/topics/{topicId}/courses],methods=[POST]}" onto public void io.javabrains.springbootstarter.course.CourseController.addCourse(io.javabrains.springbootstarter.course.Course,java.lang.String)
+2017-05-14 12:02:20.830  INFO 2608 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/topics/{topicId}/courses/{id}]}" onto public io.javabrains.springbootstarter.course.Course io.javabrains.springbootstarter.course.CourseController.getCourse(java.lang.String)
+2017-05-14 12:02:20.831  INFO 2608 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/topics/{topicId}/courses/{id}],methods=[PUT]}" onto public void io.javabrains.springbootstarter.course.CourseController.updateCourse(io.javabrains.springbootstarter.course.Course,java.lang.String,java.lang.String)
+2017-05-14 12:02:20.832  INFO 2608 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/topics/{topicId}/courses/{id}],methods=[DELETE]}" onto public void io.javabrains.springbootstarter.course.CourseController.deleteTopic(java.lang.String)
+2017-05-14 12:02:20.832  INFO 2608 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/topics/{id}/courses]}" onto public java.util.List<io.javabrains.springbootstarter.course.Course> io.javabrains.springbootstarter.course.CourseController.getAllCourses(java.lang.String)
+2017-05-14 12:02:20.834  INFO 2608 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/topics/{id}],methods=[DELETE]}" onto public void io.javabrains.springbootstarter.topic.TopicController.deleteTopic(java.lang.String)
+2017-05-14 12:02:20.835  INFO 2608 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/topics]}" onto public java.util.List<io.javabrains.springbootstarter.topic.Topic> io.javabrains.springbootstarter.topic.TopicController.getAllTopics()
+2017-05-14 12:02:20.835  INFO 2608 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/topics/{id}]}" onto public io.javabrains.springbootstarter.topic.Topic io.javabrains.springbootstarter.topic.TopicController.getTopic(java.lang.String)
+2017-05-14 12:02:20.836  INFO 2608 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/topics],methods=[POST]}" onto public void io.javabrains.springbootstarter.topic.TopicController.addTopic(io.javabrains.springbootstarter.topic.Topic)
+2017-05-14 12:02:20.837  INFO 2608 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/topics/{id}],methods=[PUT]}" onto public void io.javabrains.springbootstarter.topic.TopicController.updateTopic(io.javabrains.springbootstarter.topic.Topic,java.lang.String)
+2017-05-14 12:02:20.841  INFO 2608 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-05-14 12:02:20.842  INFO 2608 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-05-14 12:02:20.894  INFO 2608 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-14 12:02:20.894  INFO 2608 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-14 12:02:20.969  INFO 2608 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-14 12:02:21.051  WARN 2608 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2017-05-14 12:02:21.859  INFO 2608 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-05-14 12:02:21.959  INFO 2608 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-05-14 12:02:21.966  INFO 2608 --- [main] io.javabrains.CourseApiMysqlApplication  : Started CourseApiMysqlApplication in 9.419 seconds (JVM running for 10.423)
+2017-05-14 12:02:57.418  INFO 2608 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-05-14 12:02:57.418  INFO 2608 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-05-14 12:02:57.455  INFO 2608 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 36 ms
+2017-05-14 12:02:57.595  INFO 2608 --- [http-nio-8080-exec-1] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-05-14 12:10:15.027  INFO 2608 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2017-05-14 12:10:15.028  INFO 2608 --- [RMI TCP Connection(2)-127.0.0.1] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@799f10e1: startup date [Sun May 14 12:02:13 IST 2017]; root of context hierarchy
+2017-05-14 12:10:15.030  INFO 2608 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-05-14 12:10:15.038  INFO 2608 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-05-14 12:17:20.064  INFO 10316 --- [main] io.javabrains.CourseApiMysqlApplication  : Starting CourseApiMysqlApplication on ADSAMANT02 with PID 10316 (C:\work\project\lib\repo\spring-elk\target\classes started by ADSAMANT in C:\work\project\lib\repo\spring-elk)
+2017-05-14 12:17:20.069  INFO 10316 --- [main] io.javabrains.CourseApiMysqlApplication  : No active profile set, falling back to default profiles: default
+2017-05-14 12:17:20.699  INFO 10316 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@799f10e1: startup date [Sun May 14 12:17:20 IST 2017]; root of context hierarchy
+2017-05-14 12:17:24.706  INFO 10316 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-05-14 12:17:24.742  INFO 10316 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-05-14 12:17:24.744  INFO 10316 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.13
+2017-05-14 12:17:25.110  INFO 10316 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-05-14 12:17:25.110  INFO 10316 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4417 ms
+2017-05-14 12:17:25.473  INFO 10316 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-05-14 12:17:25.473  INFO 10316 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-05-14 12:17:25.483  INFO 10316 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-05-14 12:17:25.483  INFO 10316 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-05-14 12:17:25.483  INFO 10316 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-05-14 12:17:26.024  INFO 10316 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-05-14 12:17:26.051  INFO 10316 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-05-14 12:17:26.194  INFO 10316 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-05-14 12:17:26.200  INFO 10316 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-05-14 12:17:26.203  INFO 10316 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-05-14 12:17:26.280  INFO 10316 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-05-14 12:17:27.121  INFO 10316 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-05-14 12:17:27.799  INFO 10316 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-05-14 12:17:28.108  INFO 10316 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-05-14 12:17:29.357  INFO 10316 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@799f10e1: startup date [Sun May 14 12:17:20 IST 2017]; root of context hierarchy
+2017-05-14 12:17:29.520  INFO 10316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/topics/{id}/courses]}" onto public java.util.List<io.javabrains.springbootstarter.course.Course> io.javabrains.springbootstarter.course.CourseController.getAllCourses(java.lang.String)
+2017-05-14 12:17:29.522  INFO 10316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/topics/{topicId}/courses/{id}]}" onto public io.javabrains.springbootstarter.course.Course io.javabrains.springbootstarter.course.CourseController.getCourse(java.lang.String)
+2017-05-14 12:17:29.523  INFO 10316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/topics/{topicId}/courses],methods=[POST]}" onto public void io.javabrains.springbootstarter.course.CourseController.addCourse(io.javabrains.springbootstarter.course.Course,java.lang.String)
+2017-05-14 12:17:29.524  INFO 10316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/topics/{topicId}/courses/{id}],methods=[DELETE]}" onto public void io.javabrains.springbootstarter.course.CourseController.deleteTopic(java.lang.String)
+2017-05-14 12:17:29.525  INFO 10316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/topics/{topicId}/courses/{id}],methods=[PUT]}" onto public void io.javabrains.springbootstarter.course.CourseController.updateCourse(io.javabrains.springbootstarter.course.Course,java.lang.String,java.lang.String)
+2017-05-14 12:17:29.527  INFO 10316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/topics/{id}],methods=[DELETE]}" onto public void io.javabrains.springbootstarter.topic.TopicController.deleteTopic(java.lang.String)
+2017-05-14 12:17:29.527  INFO 10316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/topics]}" onto public java.util.List<io.javabrains.springbootstarter.topic.Topic> io.javabrains.springbootstarter.topic.TopicController.getAllTopics()
+2017-05-14 12:17:29.527  INFO 10316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/topics/{id}]}" onto public io.javabrains.springbootstarter.topic.Topic io.javabrains.springbootstarter.topic.TopicController.getTopic(java.lang.String)
+2017-05-14 12:17:29.528  INFO 10316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/topics],methods=[POST]}" onto public void io.javabrains.springbootstarter.topic.TopicController.addTopic(io.javabrains.springbootstarter.topic.Topic)
+2017-05-14 12:17:29.529  INFO 10316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/topics/{id}],methods=[PUT]}" onto public void io.javabrains.springbootstarter.topic.TopicController.updateTopic(io.javabrains.springbootstarter.topic.Topic,java.lang.String)
+2017-05-14 12:17:29.533  INFO 10316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-05-14 12:17:29.534  INFO 10316 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-05-14 12:17:29.611  INFO 10316 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-14 12:17:29.612  INFO 10316 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-14 12:17:29.695  INFO 10316 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-14 12:17:29.776  WARN 10316 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2017-05-14 12:17:30.898  INFO 10316 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-05-14 12:17:31.002  INFO 10316 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-05-14 12:17:31.012  INFO 10316 --- [main] io.javabrains.CourseApiMysqlApplication  : Started CourseApiMysqlApplication in 11.606 seconds (JVM running for 12.869)
+2017-05-14 12:18:21.524  INFO 10316 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-05-14 12:18:21.525  INFO 10316 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-05-14 12:18:21.555  INFO 10316 --- [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 29 ms
+2017-05-14 12:18:21.628  INFO 10316 --- [http-nio-8080-exec-2] o.h.h.i.QueryTranslatorFactoryInitiator  : HHH000397: Using ASTQueryTranslatorFactory
+2017-05-14 12:24:50.101  INFO 10316 --- [RMI TCP Connection(2)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2017-05-14 12:24:50.101  INFO 10316 --- [RMI TCP Connection(2)-127.0.0.1] ationConfigEmbeddedWebApplicationContext : Closing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@799f10e1: startup date [Sun May 14 12:17:20 IST 2017]; root of context hierarchy
+2017-05-14 12:24:50.101  INFO 10316 --- [RMI TCP Connection(2)-127.0.0.1] o.s.j.e.a.AnnotationMBeanExporter        : Unregistering JMX-exposed beans on shutdown
+2017-05-14 12:24:50.101  INFO 10316 --- [RMI TCP Connection(2)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2017-05-14 12:24:55.555  INFO 10784 --- [main] io.javabrains.CourseApiMysqlApplication  : Starting CourseApiMysqlApplication on ADSAMANT02 with PID 10784 (C:\work\project\lib\repo\spring-elk\target\classes started by ADSAMANT in C:\work\project\lib\repo\spring-elk)
+2017-05-14 12:24:55.561  INFO 10784 --- [main] io.javabrains.CourseApiMysqlApplication  : No active profile set, falling back to default profiles: default
+2017-05-14 12:24:56.251  INFO 10784 --- [main] ationConfigEmbeddedWebApplicationContext : Refreshing org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@799f10e1: startup date [Sun May 14 12:24:56 IST 2017]; root of context hierarchy
+2017-05-14 12:24:59.556  INFO 10784 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat initialized with port(s): 8080 (http)
+2017-05-14 12:24:59.578  INFO 10784 --- [main] o.apache.catalina.core.StandardService   : Starting service Tomcat
+2017-05-14 12:24:59.580  INFO 10784 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet Engine: Apache Tomcat/8.5.13
+2017-05-14 12:25:00.352  INFO 10784 --- [localhost-startStop-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2017-05-14 12:25:00.353  INFO 10784 --- [localhost-startStop-1] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4104 ms
+2017-05-14 12:25:00.748  INFO 10784 --- [localhost-startStop-1] o.s.b.w.servlet.ServletRegistrationBean  : Mapping servlet: 'dispatcherServlet' to [/]
+2017-05-14 12:25:00.755  INFO 10784 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'characterEncodingFilter' to: [/*]
+2017-05-14 12:25:00.756  INFO 10784 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'hiddenHttpMethodFilter' to: [/*]
+2017-05-14 12:25:00.757  INFO 10784 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'httpPutFormContentFilter' to: [/*]
+2017-05-14 12:25:00.759  INFO 10784 --- [localhost-startStop-1] o.s.b.w.servlet.FilterRegistrationBean   : Mapping filter: 'requestContextFilter' to: [/*]
+2017-05-14 12:25:01.428  INFO 10784 --- [main] j.LocalContainerEntityManagerFactoryBean : Building JPA container EntityManagerFactory for persistence unit 'default'
+2017-05-14 12:25:01.456  INFO 10784 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2017-05-14 12:25:01.632  INFO 10784 --- [main] org.hibernate.Version                    : HHH000412: Hibernate Core {5.0.12.Final}
+2017-05-14 12:25:01.636  INFO 10784 --- [main] org.hibernate.cfg.Environment            : HHH000206: hibernate.properties not found
+2017-05-14 12:25:01.639  INFO 10784 --- [main] org.hibernate.cfg.Environment            : HHH000021: Bytecode provider name : javassist
+2017-05-14 12:25:01.772  INFO 10784 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+2017-05-14 12:25:02.789  INFO 10784 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2017-05-14 12:25:03.259  INFO 10784 --- [main] org.hibernate.tool.hbm2ddl.SchemaUpdate  : HHH000228: Running hbm2ddl schema update
+2017-05-14 12:25:03.528  INFO 10784 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2017-05-14 12:25:04.285  INFO 10784 --- [main] s.w.s.m.m.a.RequestMappingHandlerAdapter : Looking for @ControllerAdvice: org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext@799f10e1: startup date [Sun May 14 12:24:56 IST 2017]; root of context hierarchy
+2017-05-14 12:25:04.458  INFO 10784 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/topics/{topicId}/courses/{id}]}" onto public io.javabrains.springbootstarter.course.Course io.javabrains.springbootstarter.course.CourseController.getCourse(java.lang.String)
+2017-05-14 12:25:04.458  INFO 10784 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/topics/{topicId}/courses],methods=[POST]}" onto public void io.javabrains.springbootstarter.course.CourseController.addCourse(io.javabrains.springbootstarter.course.Course,java.lang.String)
+2017-05-14 12:25:04.458  INFO 10784 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/topics/{topicId}/courses/{id}],methods=[PUT]}" onto public void io.javabrains.springbootstarter.course.CourseController.updateCourse(io.javabrains.springbootstarter.course.Course,java.lang.String,java.lang.String)
+2017-05-14 12:25:04.458  INFO 10784 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/topics/{id}/courses]}" onto public java.util.List<io.javabrains.springbootstarter.course.Course> io.javabrains.springbootstarter.course.CourseController.getAllCourses(java.lang.String)
+2017-05-14 12:25:04.458  INFO 10784 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/topics/{topicId}/courses/{id}],methods=[DELETE]}" onto public void io.javabrains.springbootstarter.course.CourseController.deleteTopic(java.lang.String)
+2017-05-14 12:25:04.458  INFO 10784 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/topics/{id}],methods=[DELETE]}" onto public void io.javabrains.springbootstarter.topic.TopicController.deleteTopic(java.lang.String)
+2017-05-14 12:25:04.458  INFO 10784 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/topics]}" onto public java.util.List<io.javabrains.springbootstarter.topic.Topic> io.javabrains.springbootstarter.topic.TopicController.getAllTopics()
+2017-05-14 12:25:04.458  INFO 10784 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/topics/{id}]}" onto public io.javabrains.springbootstarter.topic.Topic io.javabrains.springbootstarter.topic.TopicController.getTopic(java.lang.String)
+2017-05-14 12:25:04.458  INFO 10784 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/topics],methods=[POST]}" onto public void io.javabrains.springbootstarter.topic.TopicController.addTopic(io.javabrains.springbootstarter.topic.Topic)
+2017-05-14 12:25:04.458  INFO 10784 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/topics/{id}],methods=[PUT]}" onto public void io.javabrains.springbootstarter.topic.TopicController.updateTopic(io.javabrains.springbootstarter.topic.Topic,java.lang.String)
+2017-05-14 12:25:04.468  INFO 10784 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error]}" onto public org.springframework.http.ResponseEntity<java.util.Map<java.lang.String, java.lang.Object>> org.springframework.boot.autoconfigure.web.BasicErrorController.error(javax.servlet.http.HttpServletRequest)
+2017-05-14 12:25:04.468  INFO 10784 --- [main] s.w.s.m.m.a.RequestMappingHandlerMapping : Mapped "{[/error],produces=[text/html]}" onto public org.springframework.web.servlet.ModelAndView org.springframework.boot.autoconfigure.web.BasicErrorController.errorHtml(javax.servlet.http.HttpServletRequest,javax.servlet.http.HttpServletResponse)
+2017-05-14 12:25:04.520  INFO 10784 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/webjars/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-14 12:25:04.520  INFO 10784 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-14 12:25:04.585  INFO 10784 --- [main] o.s.w.s.handler.SimpleUrlHandlerMapping  : Mapped URL path [/**/favicon.ico] onto handler of type [class org.springframework.web.servlet.resource.ResourceHttpRequestHandler]
+2017-05-14 12:25:04.676  WARN 10784 --- [main] .t.AbstractTemplateResolverConfiguration : Cannot find template location: classpath:/templates/ (please add some templates or check your Thymeleaf configuration)
+2017-05-14 12:25:05.667  INFO 10784 --- [main] o.s.j.e.a.AnnotationMBeanExporter        : Registering beans for JMX exposure on startup
+2017-05-14 12:25:05.937  INFO 10784 --- [main] s.b.c.e.t.TomcatEmbeddedServletContainer : Tomcat started on port(s): 8080 (http)
+2017-05-14 12:25:05.959  INFO 10784 --- [main] io.javabrains.CourseApiMysqlApplication  : Started CourseApiMysqlApplication in 11.136 seconds (JVM running for 12.147)
+2017-05-14 12:27:46.913  INFO 10784 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring FrameworkServlet 'dispatcherServlet'
+2017-05-14 12:27:46.913  INFO 10784 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization started
+2017-05-14 12:27:46.942  INFO 10784 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : FrameworkServlet 'dispatcherServlet': initialization completed in 29 ms
