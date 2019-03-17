@@ -1,0 +1,20 @@
+apiVersion: apps/v1beta2
+kind: Deployment
+metadata:
+  name: aditya-debian-git
+spec:
+  selector:
+    matchLabels:
+      app: aditya-debian-git
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: aditya-debian-git
+    spec:
+      containers:
+      - name: aditya-debian-git
+        image: adityasamant/debian-git:1.00
+        ports:
+        - containerPort: 5000
+        

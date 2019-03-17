@@ -1,22 +1,22 @@
 apiVersion: apps/v1beta2
 kind: Deployment
 metadata:
-  name: tomcat-deployment
+  name: mongodb-deployment
 spec:
   selector:
     matchLabels:
-      app: tomcat
+      app: mongodb
   replicas: 4
   template:
     metadata:
       labels:
-        app: tomcat
+        app: mongodb
     spec:
       containers:
-      - name: tomcat
-        image: tomcat:9.0
+      - name: mongo
+        image: mongo:4.1.9
         ports:
-        - containerPort: 8080
+        - containerPort: 27017
       nodeSelector:
         storageType: ssd
         
