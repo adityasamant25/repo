@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.training</groupId>
+		<artifactId>spring-on-cloud</artifactId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<artifactId>spring-cloud-docker</artifactId>
+	<name>spring-cloud-docker</name>
+	<description>spring-cloud-docker project for Spring Boot</description>
+
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+		</plugins>
+	</build>
+	
+	<profiles>
+		<profile>
+			<id>docker</id>
+				<build>
+					<plugins>
+						<plugin>
+							<groupId>com.spotify</groupId>
+							<artifactId>docker-maven-plugin</artifactId>
+							<version>1.2.0</version>
+							<configuration>
+								<imageName>spring-cloud-docker</imageName>
+								<baseImage>java:oracle-java8</baseImage>
+								<entryPoint>["java", "-jar", "/${project.build.finalName}.jar"]</entryPoint>
+								<resources>
+									<resource>
+										<targetPath>/</targetPath>
+										<directory>${project.build.directory}</directory>
+										<include>${project.build.finalName}.jar</include>
+									</resource>
+								</resources>
+							</configuration>
+							<executions>
+								<execution>
+									<id>docker</id>
+									<phase>package</phase>
+									<goals>
+										<goal>build</goal>
+									</goals>
+								</execution>
+							</executions>
+						</plugin>
+					</plugins>
+			</build>
+		</profile>
+	</profiles>
+
+</project>

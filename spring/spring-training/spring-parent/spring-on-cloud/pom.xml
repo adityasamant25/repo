@@ -5,11 +5,11 @@
     <artifactId>spring-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
   </parent>
-  <artifactId>spring-configuration</artifactId>
+  <artifactId>spring-on-cloud</artifactId>
   <packaging>pom</packaging>
   <modules>
-  	<module>spring-configuration-basic</module>
-  	<module>spring-configuration-basic-cloudserver</module>
-  	<module>spring-configuration-basic-cloudclient</module>
+  	<module>spring-cloud-cloudfoundry</module>
+  	<module>spring-cloud-heroku</module>
+  	<module>spring-cloud-docker</module>
   </modules>
 </project>

@@ -10,6 +10,7 @@
 	</parent>
 	<groupId>com.training</groupId>
 	<artifactId>spring-parent</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
 	<packaging>pom</packaging>
 	<properties>
 		<java.version>1.8</java.version>
@@ -50,5 +51,6 @@
 	</repositories>
 	<modules>
 		<module>spring-configuration</module>
+		<module>spring-on-cloud</module>
 	</modules>
 </project>
