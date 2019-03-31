@@ -13,5 +13,6 @@
   	<module>spring-cloud-docker</module>
   	<module>spring-cloud-services</module>
   	<module>spring-cloud-connectors</module>
+  	<module>spring-cloud-session</module>
   </modules>
 </project>

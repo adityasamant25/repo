@@ -1,0 +1,6 @@
+---
+applications:
+- name: spring-cloud-session
+
+  services:
+  - spring-redis-session
