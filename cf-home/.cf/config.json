@@ -1,0 +1,48 @@
+{
+  "ConfigVersion": 3,
+  "Target": "https://api.run.pivotal.io",
+  "APIVersion": "2.133.0",
+  "AuthorizationEndpoint": "https://login.run.pivotal.io",
+  "DopplerEndPoint": "wss://doppler.run.pivotal.io:443",
+  "UaaEndpoint": "https://uaa.run.pivotal.io",
+  "RoutingAPIEndpoint": "https://api.run.pivotal.io/routing",
+  "AccessToken": "bearer eyJhbGciOiJSUzI1NiIsImprdSI6Imh0dHBzOi8vdWFhLnJ1bi5waXZvdGFsLmlvL3Rva2VuX2tleXMiLCJraWQiOiJzaGEyLTIwMTctMDEtMjAta2V5IiwidHlwIjoiSldUIn0.eyJqdGkiOiI1MGVmODI5MTgyNzA0YWYwYTViNDY5YzI2MjU0OWM2NCIsInN1YiI6Ijg4YjI3OTAyLTY5MmYtNDU0ZS04NDFmLTllZmM5NDBkYzI2NiIsInNjb3BlIjpbImNsb3VkX2NvbnRyb2xsZXIucmVhZCIsInBhc3N3b3JkLndyaXRlIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSIsIm9wZW5pZCIsInVhYS51c2VyIl0sImNsaWVudF9pZCI6ImNmIiwiY2lkIjoiY2YiLCJhenAiOiJjZiIsImdyYW50X3R5cGUiOiJwYXNzd29yZCIsInVzZXJfaWQiOiI4OGIyNzkwMi02OTJmLTQ1NGUtODQxZi05ZWZjOTQwZGMyNjYiLCJvcmlnaW4iOiJ1YWEiLCJ1c2VyX25hbWUiOiJhZGl0eWFzYW1hbnRAZ21haWwuY29tIiwiZW1haWwiOiJhZGl0eWFzYW1hbnRAZ21haWwuY29tIiwiYXV0aF90aW1lIjoxNTU0MDE2NDc5LCJyZXZfc2lnIjoiMjFhOTczM2YiLCJpYXQiOjE1NTQwMTk2ODIsImV4cCI6MTU1NDAyMDI4MiwiaXNzIjoiaHR0cHM6Ly91YWEucnVuLnBpdm90YWwuaW8vb2F1dGgvdG9rZW4iLCJ6aWQiOiJ1YWEiLCJhdWQiOlsiY2xvdWRfY29udHJvbGxlciIsInBhc3N3b3JkIiwiY2YiLCJ1YWEiLCJvcGVuaWQiXX0.nX_KCkiNJI9suL9sDtI5PaXR57n2Le5t2Hg16-DtpkLIS1cyEjwuXfO1jgax5L-NXdzaJVRSOw_2iA5NxBQLDetqBO4MVft60jig6Fp31VO-7Zcy-fQs36aAuO1_E4winteQ2HZ5lN7KlkodcTk2WcOmQttvAYaOZA3Bt8whLEsymshple5zD8hMhzYa3u38AC620EhG16e6Vu_lz0nA262Cz0IcjAYUJbbFsRu3HhOUaS4lNQUPqcwXr22Roy4mF9m-041wwdCQHvFS4AUX-nGUeyGpUU0yBf73KoHnh2MZSZ6_UEq0XxNTNoCHhxWh-4bXewo1wqbfpfZVTA0U0Q",
+  "SSHOAuthClient": "ssh-proxy",
+  "UAAOAuthClient": "cf",
+  "UAAOAuthClientSecret": "",
+  "UAAGrantType": "",
+  "RefreshToken": "eyJhbGciOiJSUzI1NiIsImprdSI6Imh0dHBzOi8vdWFhLnJ1bi5waXZvdGFsLmlvL3Rva2VuX2tleXMiLCJraWQiOiJzaGEyLTIwMTctMDEtMjAta2V5IiwidHlwIjoiSldUIn0.eyJqdGkiOiJhYWVlYWQ4MTJkYzE0MjQ3ODEzNGE3NTdkZDdiOWNjMC1yIiwic3ViIjoiODhiMjc5MDItNjkyZi00NTRlLTg0MWYtOWVmYzk0MGRjMjY2IiwiaWF0IjoxNTU0MDE2NDc5LCJleHAiOjE1NTQ2MjEyNzksImNpZCI6ImNmIiwiY2xpZW50X2lkIjoiY2YiLCJpc3MiOiJodHRwczovL3VhYS5ydW4ucGl2b3RhbC5pby9vYXV0aC90b2tlbiIsInppZCI6InVhYSIsImF1ZCI6WyJjbG91ZF9jb250cm9sbGVyIiwicGFzc3dvcmQiLCJjZiIsInVhYSIsIm9wZW5pZCJdLCJncmFudGVkX3Njb3BlcyI6WyJvcGVuaWQiLCJ1YWEudXNlciIsImNsb3VkX2NvbnRyb2xsZXIucmVhZCIsInBhc3N3b3JkLndyaXRlIiwiY2xvdWRfY29udHJvbGxlci53cml0ZSJdLCJhbXIiOlsicHdkIl0sImF1dGhfdGltZSI6MTU1NDAxNjQ3OSwiZ3JhbnRfdHlwZSI6InBhc3N3b3JkIiwidXNlcl9uYW1lIjoiYWRpdHlhc2FtYW50QGdtYWlsLmNvbSIsIm9yaWdpbiI6InVhYSIsInVzZXJfaWQiOiI4OGIyNzkwMi02OTJmLTQ1NGUtODQxZi05ZWZjOTQwZGMyNjYiLCJyZXZfc2lnIjoiMjFhOTczM2YifQ.cQGSOQXsNsSTQFeSHFcoaBunQ2_WXa1BmDrlSAdwvxGj9uuq-p7WH7L1QiVkB_3-WjIRDO8LuZy3ZKmVgEd7yHjtgL-lxXi5KoVeV7upFMMWtBRDXn8AA7QEzaRdcYuwOljFsYZzLKVYYPPOU-Js5zG9PweQkFR7enOLWBa5DlFS35_LKl8kmyRI1cdQVEeSU9G9KhDCRen2aQXCaNYkgwbzhbjjxTpdhF5AuE3RKSZuM6atuQD_J3JYqKm5u9IZGxDH61T8faiiD4TZnxDvkzIyeuS1lA_7gOcBd4xm8B5WGgqwdCsZdPuqxcY0UbipMpLF7tGG8paHb1F8K_sUpA",
+  "OrganizationFields": {
+    "GUID": "84352640-8012-4c98-bd42-909afdb00060",
+    "Name": "aditya-platform",
+    "QuotaDefinition": {
+      "guid": "",
+      "name": "",
+      "memory_limit": 0,
+      "instance_memory_limit": 0,
+      "total_routes": 0,
+      "total_services": 0,
+      "non_basic_services_allowed": false,
+      "app_instance_limit": -1,
+      "total_reserved_route_ports": 0
+    }
+  },
+  "SpaceFields": {
+    "GUID": "b650501d-7737-4368-94df-9f728c397f2f",
+    "Name": "development",
+    "AllowSSH": true
+  },
+  "SSLDisabled": false,
+  "AsyncTimeout": 0,
+  "Trace": "",
+  "ColorEnabled": "",
+  "Locale": "",
+  "PluginRepos": [
+    {
+      "Name": "CF-Community",
+      "URL": "https://plugins.cloudfoundry.org"
+    }
+  ],
+  "MinCLIVersion": "6.22.0",
+  "MinRecommendedCLIVersion": "latest"
+}

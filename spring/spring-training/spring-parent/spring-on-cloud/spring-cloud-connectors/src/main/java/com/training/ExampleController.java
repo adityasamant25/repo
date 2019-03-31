@@ -3,7 +3,9 @@ package com.training;
 import org.springframework.cloud.app.ApplicationInstanceInfo;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
+@RestController
 public class ExampleController {
 
 	private final JdbcTemplate jdbcTemplate;

@@ -1,0 +1,9 @@
+---
+applications:
+- name: spring-cloud-services
+
+  services:
+  - spring-car-sql-database
+  - spring-car-sql-database2
+  
+  memory: 1G

@@ -1,5 +1,6 @@
 ---
-services:
-- spring-car-sql-database
+applications:
+- name: spring-cloud-connectors
 
-
+  services:
+  - spring-car-sql-database
