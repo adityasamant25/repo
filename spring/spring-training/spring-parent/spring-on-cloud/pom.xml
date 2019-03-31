@@ -11,5 +11,7 @@
   	<module>spring-cloud-cloudfoundry</module>
   	<module>spring-cloud-heroku</module>
   	<module>spring-cloud-docker</module>
+  	<module>spring-cloud-services</module>
+  	<module>spring-cloud-connectors</module>
   </modules>
 </project>
