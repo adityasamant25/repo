@@ -2,4 +2,4 @@
 applications:
 - name: my-hello-world
   
-  memory: 256M
+  memory: 1G

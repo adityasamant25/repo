@@ -52,5 +52,6 @@
 	<modules>
 		<module>spring-configuration</module>
 		<module>spring-on-cloud</module>
+		<module>spring-data</module>
 	</modules>
 </project>
