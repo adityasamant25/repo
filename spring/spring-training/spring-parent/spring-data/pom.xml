@@ -10,5 +10,6 @@
   <modules>
   	<module>spring-data-jpa</module>
   	<module>spring-data-jdbc</module>
+  	<module>spring-data-flyway</module>
   </modules>
 </project>
