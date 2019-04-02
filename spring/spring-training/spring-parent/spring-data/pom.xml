@@ -4,6 +4,7 @@
     <groupId>com.training</groupId>
     <artifactId>spring-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
+    <relativePath>../</relativePath>
   </parent>
   <artifactId>spring-data</artifactId>
   <packaging>pom</packaging>

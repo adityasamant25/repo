@@ -6,7 +6,7 @@
 		<groupId>com.training</groupId>
 		<artifactId>spring-data</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath>../</relativePath> <!-- lookup parent from repository -->
 	</parent>
 	<artifactId>spring-data-jdbc</artifactId>
 	<name>spring-data-jdbc</name>
