@@ -1,13 +1,6 @@
 package com.training;
 
-import java.net.InetAddress;
-import java.net.UnknownHostException;
-
-import org.elasticsearch.client.Client;
-import org.elasticsearch.common.settings.Settings;
-import org.elasticsearch.common.transport.TransportAddress;
 import org.elasticsearch.index.query.QueryBuilders;
-import org.elasticsearch.transport.client.PreBuiltTransportClient;
 import org.springframework.beans.factory.InitializingBean;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -22,21 +15,6 @@ public class SpringDataElasticsearchApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringDataElasticsearchApplication.class, args);
-	}
-
-	@SuppressWarnings("resource")
-	@Bean
-	public Client client() {
-		Client client = null;
-		Settings settings = Settings.builder().put("cluster.name", "docker-cluster").build();
-		try {
-			client = new PreBuiltTransportClient(settings)
-					.addTransportAddress(new TransportAddress(InetAddress.getByName("localhost"), 9300));
-		} catch (UnknownHostException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		return client;
 	}
 
 	@Bean
