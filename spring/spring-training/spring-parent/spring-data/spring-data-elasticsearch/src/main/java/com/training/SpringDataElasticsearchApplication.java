@@ -17,6 +17,10 @@ public class SpringDataElasticsearchApplication {
 		SpringApplication.run(SpringDataElasticsearchApplication.class, args);
 		System.exit(0);
 	}
+	
+	//Run Elastic Search as a Docker container
+	//docker network create somenetwork
+	//docker run -d --name elasticsearch --net somenetwork -p 9200:9200 -p 9300:9300 -e "discovery.type=single-node" elasticsearch:tag
 
 	@Bean
 	public InitializingBean seedDatabase(CarRepository repository) {
