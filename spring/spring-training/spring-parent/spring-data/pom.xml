@@ -13,5 +13,6 @@
   	<module>spring-data-jdbc</module>
   	<module>spring-data-flyway</module>
   	<module>spring-data-redis</module>
+  	<module>spring-data-mongodb</module>
   </modules>
 </project>
