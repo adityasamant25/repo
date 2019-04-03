@@ -15,6 +15,7 @@ public class SpringDataElasticsearchApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(SpringDataElasticsearchApplication.class, args);
+		System.exit(0);
 	}
 
 	@Bean
@@ -32,7 +33,7 @@ public class SpringDataElasticsearchApplication {
 	public CommandLineRunner example(CarRepository repository, ElasticsearchTemplate template) {
 		return (args) -> {
 			System.err.println("From the repository...");
-			repository.findByMakeIgnoringCase("Honda").forEach(System.err::println);
+			repository.findByMakeIgnoringCase("Ford").forEach(System.err::println);
 
 			System.err.println("\nFrom the template...");
 			;
