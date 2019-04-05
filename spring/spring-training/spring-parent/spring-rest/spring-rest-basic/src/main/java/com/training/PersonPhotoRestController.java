@@ -45,13 +45,7 @@ public class PersonPhotoRestController {
 
 	@RequestMapping(method = RequestMethod.GET)
 	public ResponseEntity<Resource> read(@PathVariable Long id) throws FileNotFoundException {
-		Person person = null;
-		Optional<Person> result = this.personRepository.findById(id);
-		if (result.isPresent()) {
-			person = result.get();
-		} else {
-			throw new EntityNotFoundException();
-		}
+		Person person = findPersonById(id);
 		File file = fileFor(person);
 		if (!file.exists()) {
 			throw new FileNotFoundException(file.getAbsolutePath());
@@ -62,16 +56,19 @@ public class PersonPhotoRestController {
 		return new ResponseEntity<Resource>(resource, httpHeaders, HttpStatus.OK);
 	}
 
-	@RequestMapping(method = { RequestMethod.POST, RequestMethod.PUT })
-	public ResponseEntity<?> write(@PathVariable Long id, @RequestParam MultipartFile file)
-			throws FileNotFoundException, IOException {
-		Person person = null;
+	private Person findPersonById(Long id) {
 		Optional<Person> result = this.personRepository.findById(id);
 		if (result.isPresent()) {
-			person = result.get();
+			return result.get();
 		} else {
 			throw new EntityNotFoundException();
 		}
+	}
+
+	@RequestMapping(method = { RequestMethod.POST, RequestMethod.PUT })
+	public ResponseEntity<?> write(@PathVariable Long id, @RequestParam MultipartFile file)
+			throws FileNotFoundException, IOException {
+		Person person = findPersonById(id);
 		FileCopyUtils.copy(file.getInputStream(), new FileOutputStream(fileFor(person)));
 		URI location = ServletUriComponentsBuilder.fromCurrentRequest().buildAndExpand(id).toUri();
 		return ResponseEntity.created(location).build();
