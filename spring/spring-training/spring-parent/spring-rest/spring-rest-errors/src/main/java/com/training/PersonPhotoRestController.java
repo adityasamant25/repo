@@ -57,7 +57,7 @@ public class PersonPhotoRestController {
 	}
 
 	public Person findPersonById(Long id) {
-		return this.personRepository.findById(id).orElseThrow(() -> new EntityNotFoundException());
+		return this.personRepository.findById(id).orElseThrow(() -> new PersonNotFoundException(id));
 	}
 	
 	@GetMapping
@@ -65,7 +65,7 @@ public class PersonPhotoRestController {
 		Person person = findPersonById(id);
 		File file = fileFor(person);
 		if (!file.exists()) {
-			throw new FileNotFoundException(file.getAbsolutePath());
+			throw new FileNotFoundException("No matching photo found at: " + file.getAbsolutePath());
 		}
 		HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.IMAGE_JPEG);
