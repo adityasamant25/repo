@@ -12,5 +12,6 @@
   <description>spring-rest project</description>
   <modules>
   	<module>spring-rest-basic</module>
+  	<module>spring-rest-errors</module>
   </modules>
 </project>

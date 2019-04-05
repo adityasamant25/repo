@@ -8,10 +8,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
-public class SpringRestBasicApplication {
+public class SpringRestErrorsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringRestBasicApplication.class, args);
+		SpringApplication.run(SpringRestErrorsApplication.class, args);
 	}
 
 	@Bean
@@ -23,4 +23,5 @@ public class SpringRestBasicApplication {
 			personRepository.findByEmail("josh@email.com").forEach(System.err::println);
 		};
 	}
+
 }
