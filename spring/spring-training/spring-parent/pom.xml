@@ -54,5 +54,6 @@
 		<module>spring-on-cloud</module>
 		<module>spring-data</module>
 		<module>spring-rest</module>
+		<module>spring-integration</module>
 	</modules>
 </project>
