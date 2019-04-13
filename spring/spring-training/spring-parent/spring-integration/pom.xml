@@ -11,5 +11,7 @@
   <modules>
   	<module>spring-integration-batch</module>
   	<module>spring-integration-and-batch</module>
+  	<module>spring-integration-consumer</module>
+  	<module>spring-integration-producer</module>
   </modules>
 </project>
