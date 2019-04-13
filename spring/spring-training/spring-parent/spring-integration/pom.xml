@@ -10,5 +10,6 @@
   <packaging>pom</packaging>
   <modules>
   	<module>spring-integration-batch</module>
+  	<module>spring-integration-and-batch</module>
   </modules>
 </project>
