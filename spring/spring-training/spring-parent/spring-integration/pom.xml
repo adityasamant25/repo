@@ -13,5 +13,7 @@
   	<module>spring-integration-and-batch</module>
   	<module>spring-integration-consumer</module>
   	<module>spring-integration-producer</module>
+  	<module>spring-integration-consumer-kafka</module>
+  	<module>spring-integration-producer-kafka</module>
   </modules>
 </project>
