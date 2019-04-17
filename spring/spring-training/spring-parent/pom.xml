@@ -55,5 +55,6 @@
 		<module>spring-data</module>
 		<module>spring-rest</module>
 		<module>spring-integration</module>
+		<module>spring-operations</module>
 	</modules>
 </project>
