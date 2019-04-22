@@ -10,5 +10,6 @@
   <modules>
   	<module>spring-operations-logging</module>
   	<module>spring-operations-actuator</module>
+  	<module>spring-operations-monitoring</module>
   </modules>
 </project>
