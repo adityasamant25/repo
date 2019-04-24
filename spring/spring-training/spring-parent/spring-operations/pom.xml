@@ -11,5 +11,8 @@
   	<module>spring-operations-logging</module>
   	<module>spring-operations-actuator</module>
   	<module>spring-operations-monitoring</module>
+  	<module>spring-operations-cloud-monitoring</module>
+  	<module>spring-operations-metrics</module>
+  	<module>spring-operations-actuator-extensions</module>
   </modules>
 </project>
