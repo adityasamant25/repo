@@ -10,5 +10,6 @@
   <modules>
   	<module>spring-edge-eureka-service</module>
   	<module>spring-edge-greetings-service</module>
+  	<module>spring-edge-greetings-client</module>
   </modules>
 </project>
