@@ -10,11 +10,11 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.zuul.EnableZuulProxy;
+import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.Ordered;
-import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.util.ReflectionUtils;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -27,6 +27,7 @@ import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 import com.netflix.zuul.exception.ZuulException;
 
+@EnableFeignClients
 @EnableZuulProxy
 @EnableDiscoveryClient
 @SpringBootApplication
@@ -44,21 +45,34 @@ public class SpringEdgeGreetingsClientApplication {
 
 }
 
+@FeignClient("greetings-service")
+interface GreetingsClient {
+	
+	@RequestMapping(method = RequestMethod.GET, value = "/greetings/{name}")
+	Greeting greet(@PathVariable("name") String name);
+}
+
 @RestController
 class GreetingsApiGatewayRestController {
 
-	private final RestTemplate restTemplate;
+	private final GreetingsClient greetingsClient;
+	
+	//private final RestTemplate restTemplate;
 
 	@Autowired
-	public GreetingsApiGatewayRestController(RestTemplate restTemplate) {
-		this.restTemplate = restTemplate;
+	public GreetingsApiGatewayRestController(GreetingsClient client) {
+		this.greetingsClient = client;
 	}
 
 	@RequestMapping(method = RequestMethod.GET, value = "/hi/{name}")
 	String greet(@PathVariable String name) {
-		ResponseEntity<Greeting> responseEntity = this.restTemplate.exchange("http://greetings-service/greetings/{name}", HttpMethod.GET, null,
-				Greeting.class, name);
-		return responseEntity.getBody().getGreeting();
+		/*
+		 * ResponseEntity<Greeting> responseEntity =
+		 * this.restTemplate.exchange("http://greetings-service/greetings/{name}",
+		 * HttpMethod.GET, null, Greeting.class, name); return
+		 * responseEntity.getBody().getGreeting();
+		 */
+		return this.greetingsClient.greet(name).getGreeting();
 	}
 }
 
