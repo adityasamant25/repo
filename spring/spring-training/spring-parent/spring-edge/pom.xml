@@ -11,5 +11,7 @@
   	<module>spring-edge-eureka-service</module>
   	<module>spring-edge-greetings-service</module>
   	<module>spring-edge-greetings-client</module>
+
+  	<module>spring-edge-hystrix-dashboard</module>
   </modules>
 </project>

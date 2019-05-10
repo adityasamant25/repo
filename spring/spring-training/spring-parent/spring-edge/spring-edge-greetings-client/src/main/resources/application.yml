@@ -2,3 +2,10 @@ server:
   port: 9999
   
 spring:  application:    name: greetings-client
+    
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - '*'

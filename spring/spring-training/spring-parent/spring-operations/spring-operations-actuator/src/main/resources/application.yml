@@ -1,3 +1,5 @@
+server:  port: 4444
+
 management:
   endpoints:
     web:
