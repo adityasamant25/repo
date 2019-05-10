@@ -1,3 +1,4 @@
 spring:
   application:
     name: greetings-service
+      sleuth:    sampler:      probability: 1.0

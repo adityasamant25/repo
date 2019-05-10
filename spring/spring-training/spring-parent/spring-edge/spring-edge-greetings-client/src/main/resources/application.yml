@@ -1,7 +1,7 @@
 server:
   port: 9999
   
-spring:  application:    name: greetings-client
+spring:  application:    name: greetings-client  sleuth:    sampler:      probability: 1.0
     
 management:
   endpoints:
@@ -9,3 +9,4 @@ management:
       exposure:
         include:
         - '*'
+        

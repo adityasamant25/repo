@@ -13,5 +13,6 @@
   	<module>spring-edge-greetings-client</module>
 
   	<module>spring-edge-hystrix-dashboard</module>
+  	<module>spring-edge-zipkin-service</module>
   </modules>
 </project>
