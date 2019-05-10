@@ -57,5 +57,6 @@
 		<module>spring-integration</module>
 		<module>spring-operations</module>
 		<module>spring-edge</module>
+		<module>spring-web</module>
 	</modules>
 </project>

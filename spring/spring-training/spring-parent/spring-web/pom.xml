@@ -4,16 +4,7 @@
     <groupId>com.training</groupId>
     <artifactId>spring-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <relativePath>../</relativePath>
   </parent>
-  <artifactId>spring-data</artifactId>
+  <artifactId>spring-web</artifactId>
   <packaging>pom</packaging>
-  <modules>
-  	<module>spring-data-jpa</module>
-  	<module>spring-data-jdbc</module>
-  	<module>spring-data-flyway</module>
-  	<!-- <module>spring-data-redis</module>
-  	<module>spring-data-mongodb</module>
-  	<module>spring-data-elasticsearch</module> -->
-  </modules>
 </project>
