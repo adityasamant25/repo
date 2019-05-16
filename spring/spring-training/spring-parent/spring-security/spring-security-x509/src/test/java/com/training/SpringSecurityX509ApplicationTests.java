@@ -53,7 +53,7 @@ public class SpringSecurityX509ApplicationTests {
         ResponseEntity<String> httpsEntity = this.restTemplate.getForEntity("/hi",
                 String.class);
         assertThat(httpsEntity.getStatusCode()).isEqualTo(HttpStatus.OK);
-        assertThat(httpsEntity.getBody()).containsIgnoringCase("hello, world");
+        assertThat(httpsEntity.getBody()).containsIgnoringCase("hello, sam");
     }
 
     @Test
@@ -71,12 +71,28 @@ public class SpringSecurityX509ApplicationTests {
         assertThat(httpsEntity.getBody()).containsIgnoringCase("hello, rod");
     }
 
+    //working
+	/*
+	 * private SSLConnectionSocketFactory socketFactory() throws Exception { char[]
+	 * password = "password".toCharArray(); KeyStore truststore =
+	 * KeyStore.getInstance("PKCS12"); truststore.load(new
+	 * ClassPathResource("rod.p12").getInputStream(), password); SSLContextBuilder
+	 * builder = new SSLContextBuilder(); builder.loadKeyMaterial(truststore,
+	 * password); builder.loadTrustMaterial(truststore, new
+	 * TrustSelfSignedStrategy()); return new
+	 * SSLConnectionSocketFactory(builder.build(), new NoopHostnameVerifier()); }
+	 */
+    
     private SSLConnectionSocketFactory socketFactory() throws Exception {
         char[] password = "password".toCharArray();
         KeyStore truststore = KeyStore.getInstance("PKCS12");
-        truststore.load(new ClassPathResource("rod.p12").getInputStream(), password);
+        truststore.load(new ClassPathResource("client_truststore.p12").getInputStream(), password);
+        
+        KeyStore keystore = KeyStore.getInstance("PKCS12");
+        keystore.load(new ClassPathResource("rod.p12").getInputStream(), password);
+        
         SSLContextBuilder builder = new SSLContextBuilder();
-        builder.loadKeyMaterial(truststore, password);
+        builder.loadKeyMaterial(keystore, password);
         builder.loadTrustMaterial(truststore, new TrustSelfSignedStrategy());
         return new SSLConnectionSocketFactory(builder.build(),
                 new NoopHostnameVerifier());

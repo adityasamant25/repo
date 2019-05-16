@@ -80,6 +80,7 @@ class GreetingsRestController {
 
 	@RequestMapping(method = RequestMethod.GET, value = "/hi")
 	public Map<String, String> greetings(Principal p) {
+		System.out.println("Principal name: " + p.getName());
 		return Collections.singletonMap("content", "Hello, " + p.getName());
 	}
 }
