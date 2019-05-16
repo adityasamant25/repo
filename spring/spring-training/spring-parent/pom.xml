@@ -58,5 +58,7 @@
 		<module>spring-operations</module>
 		<module>spring-edge</module>
 		<module>spring-web</module>
+		
+		<module>spring-security</module>
 	</modules>
 </project>
