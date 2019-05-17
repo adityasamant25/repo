@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>LiveLessons - WebJars</title>
+<script src="/webjars/jquery/2.1.1/jquery.js"></script>
+<script src="/js/jquery.lettering.js"></script>
+<link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+<body>
+	<div class="container">
+		<div>
+			<h2>Demo</h2>
+			<h2>WebJars</h2>
+			<h2>Spring Boot</h2>
+		</div>
+		<div class="container unauthenticated">
+			With Facebook: <a href="/login">click here</a>
+		</div>
+		<div class="container authenticated" style="display: none">
+			Logged in as: <span id="user"></span>
+		</div>
+	</div>
+	<script>
+		$(document).ready(
+				function() {
+					$("div.container > div").addClass('os-phrases')
+					$(".os-phrases > h2").lettering('words').children("span")
+							.lettering().children("span").lettering();
+				})
+	</script>
+</body>
+<script type="text/javascript">
+	$.get("/user", function(data) {
+		$("#user").html(data.userAuthentication.details.name);
+		$(".unauthenticated").hide()
+		$(".authenticated").show()
+	});
+</script>
+</html>
