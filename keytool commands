@@ -1,0 +1,25 @@
+Server key pair
+keytool -genkeypair -keyalg RSA -keysize 3072 -alias test -dname "CN=Amdocs,OU=Development,O=Test,C=IN" -ext "SAN:c=DNS:localhost,IP:127.0.0.1" -validity 3650 -keystore src/main/resources/identity.jks -storepass secret -keypass secret -deststoretype pkcs12
+
+Server certificate
+keytool -exportcert -keystore src/main/resources/identity.jks -storepass secret -alias test -rfc -file src/main/resources/server.crt
+
+Client keypair
+keytool -genkeypair -keyalg RSA -keysize 3072 -alias clienttest -dname "CN=Client,OU=Development,O=ClientTest,C=IN" -ext "SAN:c=DNS:localhost,IP:127.0.0.1" -validity 3650 -keystore src/test/resources/client_identity.jks -storepass secret -keypass secret -deststoretype pkcs12
+
+Client certificate
+keytool -exportcert -keystore src/test/resources/client_identity.jks -storepass secret -alias clienttest -rfc -file src/test/resources/client.crt
+
+Server certificate stored to client truststore
+keytool -keystore src/test/resources/client_truststore.jks -importcert -file src/main/resources/server.crt -alias test -storepass secret
+
+Client certificate stored to server truststore
+keytool -keystore src/main/resources/server_truststore.jks -importcert -file src/test/resources/client.crt -alias clienttest -storepass secret
+
+
+curl -v https://localhost:8443/user -cacert C:/work/project/scratchpad/repo/spring/spring-training/spring-parent/spring-security/spring-security-x509/src/test/resources/client.crt
+
+rod.p12
+rod.pem
+server.jks
+
